@@ -1,0 +1,82 @@
+YoutubePlayer:
+    properties:
+        name: Youtube embed player
+        description: Add an Youtube integration block from a shareable youtube url
+        labelized-by: title->value
+        category: [Players]
+    elements:
+        title:
+            type: BackBee\ClassContent\Element\Text
+            label: Title
+            default:
+                value: "Youtube video block"
+            parameters:
+                rte: lite
+        youtubeid:
+            type: BackBee\ClassContent\Element\Text
+            label: Youtube video id (https://www.youtube.com/watch?v=<id>)
+            default:
+                value: "YeWZaLfAYN4"
+        height:
+            type: BackBee\ClassContent\Element\Text
+            label: Player height
+            default:
+                value: "270"
+        width:
+            type: BackBee\ClassContent\Element\Text
+            label: Player width
+            default:
+                value: "480"
+    parameters:
+        autohide:
+            type: "radio"
+            label: "Indicates whether the video controls will automatically hide after a video begins playing."
+            options:
+                0: "Regardless of the player's dimensions, the video progress bar and player controls are visible throughout the video."
+                1: "Regardless of the player's dimensions, the video progress bar and player controls display or hide automatically."
+                2: "If the player has a 16:9 or 4:3 aspect ratio, the video progress bar and player controls display or hide automatically. Otherwise, those controls are visible throughout the video."
+            value: ['2']
+        autoplay:
+            type: "radio"
+            inline: true
+            label: "Specifies whether the initial video will automatically start to play when the player loads."
+            options:
+                0: "false"
+                1: "true"
+            value: ['0']
+        color:
+            type: "radio"
+            inline: true
+            label: "Specifies the color that will be used in the player's video progress bar to highlight the amount of the video that the viewer has already seen."
+            options:
+                red: "red"
+                white: "white"
+            value: ['white']
+        controls:
+            type: "radio"
+            label: "Indicates whether the video player controls are displayed. For IFrame embeds that load a Flash player, it also defines when the controls display in the player as well as when the player will load."
+            options:
+                0: "Player controls do not display in the player. For IFrame embeds, the Flash player loads immediately."
+                1: "Player controls display in the player. For IFrame embeds, the controls display immediately and the Flash player also loads immediately."
+                2: "Player controls display in the player. For IFrame embeds, the controls display and the Flash player loads after the user initiates the video playback."
+            value: ['1']
+        theme:
+            type: "radio"
+            inline: true
+            label: "Indicates whether the embedded player will display player controls (like a play button or volume control) within a dark or light control bar."
+            options:
+                light: "Light"
+                dark: "Dark"
+            value: ['dark']
+        loop:
+            type: "radio"
+            inline: true
+            label: "Causes the player to play the initial video again and again. In the case of a playlist player, the player plays the entire playlist and then starts again at the first video."
+            options:
+                0: "false"
+                1: "true"
+            value: ['false']
+        playlist:
+            type: "text"
+            label: "Specifies a comma-separated list of video IDs to play. If you specify a value, the first video that plays will be the VIDEO_ID specified in the URL path, and the videos specified in the playlist parameter will play thereafter."
+            value: ~

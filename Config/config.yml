@@ -1,0 +1,7 @@
+bundle:
+    name: LpPlayerBundle
+    description: LpPlayerBundle provides content types for most popular players
+    author: Mickael Andrieu <mickael.andrieu@lp-digital.fr>
+    version: 1
+    enable: true
+    config_per_site: false

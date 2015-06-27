@@ -1,0 +1,44 @@
+SpotifyPlayer:
+    properties:
+        name: Spotify Play Button
+        description: Add a Spotify integration block from a shareable spotify url
+        labelized-by: title->value
+        category: [Players]
+    elements:
+        title:
+            type: BackBee\ClassContent\Element\Text
+            label: Title
+            default:
+                value: "Spotify Play Button"
+            parameters:
+                rte: lite
+    parameters:
+        url:
+            type: "text"
+            value: "spotify:track:4th1RQAelzqgY7wL53UGQt"
+            label: "Shareable Spotify url"
+        block_height:
+            type: "text"
+            value: 80
+            label: "Player height (px)"
+        block_width:
+            type: "text"
+            value: 300
+            label: "Player width (px)"
+        theme:
+            type: "radio"
+            inline: true
+            label: "Player theme (white is only available for default rendering)"
+            options:
+                white: "White"
+                dark: "Dark"
+            value: ['dark']
+        view:
+            type: "radio"
+            inline: true
+            label: "Player view (list by default)"
+            options:
+                list: "list"
+                coverart: "cover art"
+            value: ['list']
+

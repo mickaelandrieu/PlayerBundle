@@ -1,0 +1,25 @@
+<div {{ this.bbcontent(null, {'class': 'video-container youtube-block'})|raw }}>
+
+    {% set youtube = this.getObject() %}
+    {% set queryParameters = "autohide=" ~ youtube.getParamValue('autohide')|first
+        ~ "&autoplay=" ~ youtube.getParamValue('autoplay')|first
+        ~ "&controls=" ~ youtube.getParamValue('controls')|first
+        ~ "&theme=" ~ youtube.getParamValue('theme')|first
+        ~ "&color=" ~ youtube.getParamValue('color')|first
+        ~ "&loop=" ~ youtube.getParamValue('loop')|first
+    %}
+
+    {% if youtube.getParamValue('playlist') is not null %}
+        {% set playlistParameters = "&playlist=" ~ youtube.getParamValue('playlist') %}
+    {% endif %}
+
+    <iframe
+        src="https://www.youtube.com/embed/{{ youtubeid }}?{{ queryParameters }}{% if playlistParameters is defined %}{{ playlistParameters }}{% endif %}"
+        width="{{ width }}"
+        height="{{ height }}"
+        frameborder="0"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen
+    ></iframe>
+</div>

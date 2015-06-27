@@ -1,0 +1,17 @@
+<div {{ this.bbcontent(null, {'class': 'video-container dailymotion-block'})|raw }}>
+
+    {% set dailymotion = this.getObject() %}
+    {% set queryParameters = "autoplay=" ~ dailymotion.getParamValue('autoplay')|first
+        ~ "&background=" ~ dailymotion.getParamValue('background')
+        ~ "&chromeless=" ~ dailymotion.getParamValue('chromeless')|first
+        ~ "&foreground=" ~ dailymotion.getParamValue('foreground')
+        ~ "&highlight=" ~ dailymotion.getParamValue('highlight')
+    %}
+
+    <iframe
+        src="https://www.dailymotion.com/embed/video/{{ dailymotionid }}?{{ queryParameters }}"
+        width="{{ width }}"
+        height="{{ height }}"
+        frameborder="0"
+        allowfullscreen></iframe>
+</div>

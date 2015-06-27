@@ -1,0 +1,58 @@
+DailyMotionPlayer:
+    properties:
+        name: DailyMotion embed player
+        description: Add a DailyMotion integration block from a shareable DailyMotion url
+        labelized-by: title->value
+        category: [Players]
+    elements:
+        title:
+            type: BackBee\ClassContent\Element\Text
+            label: Title
+            default:
+                value: "DailyMotion embed player"
+            parameters:
+                rte: lite
+        dailymotionid:
+            type: BackBee\ClassContent\Element\Text
+            label: DailyMotion video id (http://dai.ly/<id>)
+            default:
+                value: "x5q9zr"
+        height:
+            type: BackBee\ClassContent\Element\Text
+            label: Player height
+            default:
+                value: "270"
+        width:
+            type: BackBee\ClassContent\Element\Text
+            label: Player width
+            default:
+                value: "480"
+    parameters:
+        autoplay:
+            type: "radio"
+            inline: true
+            label: "Starts the playback of the video automatically after the player load."
+            options:
+                0: "false"
+                1: "true"
+            value: ['0']
+        background:
+            type: "text"
+            label: "Specify the color HTML color of the background of controls elements (defaults to FFC300). Make sure that you don’t include the '#'."
+            value: "FFC300"
+        chromeless:
+            type: "radio"
+            label: "Indicates whether the video player controls are displayed."
+            inline: true
+            options:
+                0: "true"
+                1: "false"
+            value: ['0']
+        foreground:
+            type: "text"
+            label: "Specify the color HTML color of the foreground of controls elements (defaults to F7FFFD). Make sure that you don’t include the '#'."
+            value: "F7FFFD"
+        highlight:
+            type: "text"
+            label: "Specify the color HTML color of controls elements highlights (defaults to 171D1B). Make sure that you don’t include the '#'."
+            value: "171D1B"

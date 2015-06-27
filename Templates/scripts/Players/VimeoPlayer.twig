@@ -1,0 +1,23 @@
+<div {{ this.bbcontent(null, {'class': 'video-container vimeo-block'})|raw }}>
+
+    {% set vimeo = this.getObject() %}
+    {% set queryParameters = "autopause=" ~ vimeo.getParamValue('autopause')|first
+        ~ "&autoplay=" ~ vimeo.getParamValue('autoplay')|first
+        ~ "&badge=" ~ vimeo.getParamValue('badge')|first
+        ~ "&byline=" ~ vimeo.getParamValue('byline')|first
+        ~ "&color=" ~ vimeo.getParamValue('color')
+        ~ "&loop=" ~ vimeo.getParamValue('loop')|first
+        ~ "&portrait=" ~ vimeo.getParamValue('portrait')|first
+        ~ "&title=" ~ vimeo.getParamValue('title')|first
+    %}
+
+    <iframe
+        src="https://player.vimeo.com/video/{{ vimeoid }}?{{ queryParameters }}"
+        width="{{ width }}"
+        height="{{ height }}"
+        frameborder="0"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen
+    ></iframe>
+</div>

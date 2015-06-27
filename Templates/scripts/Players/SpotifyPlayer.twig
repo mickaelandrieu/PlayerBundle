@@ -1,0 +1,9 @@
+<div {{ this.bbcontent(null, {'class': 'video-container spotify-block'})|raw }}>
+    <iframe
+        src="https://embed.spotify.com/?uri={{ this.getObject().getParamValue('url') }}&view={{ this.getObject().getParamValue('view')|first }}&theme={{ this.getObject().getParamValue('theme')|first }}"
+        width="{{ this.getObject().getParamValue('block_width') }}"
+        height="{{ this.getObject().getParamValue('block_height') }}"
+        frameborder="0"
+        allowtransparency="true"
+    ></iframe>
+</div>

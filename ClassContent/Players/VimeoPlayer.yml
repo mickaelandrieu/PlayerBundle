@@ -1,0 +1,90 @@
+VimeoPlayer:
+    properties:
+        name: Vimeo embed player
+        description: Add a Vimeo integration block from a shareable vimeo url
+        labelized-by: title->value
+        category: [Players]
+    elements:
+        title:
+            type: BackBee\ClassContent\Element\Text
+            label: Block title
+            default:
+                value: "Vimeo embed player"
+            parameters:
+                rte: lite
+        vimeoid:
+            type: BackBee\ClassContent\Element\Text
+            label: Vimeo video id (https://player.vimeo.com/video/<id>)
+            default:
+                value: "129799243"
+        height:
+            type: BackBee\ClassContent\Element\Text
+            label: Player height
+            default:
+                value: "270"
+        width:
+            type: BackBee\ClassContent\Element\Text
+            label: Player width
+            default:
+                value: "480"
+    parameters:
+        autopause:
+            type: "radio"
+            inline: true
+            label: "Enables or disables pausing this video when another video is played. Defaults to true."
+            options:
+                1: "true"
+                0: "false"
+            value: ['1']
+        autoplay:
+            type: "radio"
+            inline: true
+            label: "Play the video automatically on load. Defaults to false. Note that this won’t work on some devices."
+            options:
+                1: "true"
+                0: "false"
+            value: ['0']
+        badge:
+            type: "radio"
+            inline: true
+            label: "Enables or disables the badge on the video. Defaults to true."
+            options:
+                1: "true"
+                0: "false"
+            value: ['1']
+        byline:
+            type: "radio"
+            inline: true
+            label: "Show the user’s byline on the video. Defaults to true."
+            options:
+                1: "true"
+                0: "false"
+            value: ['1']
+        color:
+            type: "text"
+            label: "Specify the color of the video controls. Defaults to 00adef. Make sure that you don’t include the '#'."
+            value: "00adef"
+        loop:
+            type: "radio"
+            inline: true
+            label: "Play the video again when it reaches the end. Defaults to false."
+            options:
+                1: "true"
+                0: "false"
+            value: ['0']
+        portrait:
+            type: "radio"
+            inline: true
+            label: "Show the user’s portrait on the video. Defaults to false."
+            options:
+                1: "true"
+                0: "false"
+            value: ['0']
+        title:
+            type: "radio"
+            inline: true
+            label: "Show the title on the video. Defaults to false."
+            options:
+                1: "true"
+                0: "false"
+            value: ['1']
