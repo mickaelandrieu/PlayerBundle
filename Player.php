@@ -4,7 +4,7 @@ namespace BackBee\Standard\Bundle\PlayerBundle;
 /*
  * Copyright (c) 2011-2015 Lp digital system
  *
- * This file is part of LpPlayerBundle.
+ * This file is part of PlayerBundle.
  *
  * BackBee is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
