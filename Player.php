@@ -1,5 +1,5 @@
 <?php
-namespace BackBee\Standard\Bundle\PlayerBundle;
+namespace LpDigital\Bundle\PlayerBundle;
 
 /*
  * Copyright (c) 2011-2015 Lp digital system

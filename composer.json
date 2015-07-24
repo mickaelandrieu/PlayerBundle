@@ -1,5 +1,5 @@
 {
-    "name": "mickaelandrieu/player-bundle",
+    "name": "Lp-digital/player-bundle",
     "description": "BackBee bundle to add most popular web player class contents",
     "type": "backbee-bundle",
     "license": "GPL-3.0+",
@@ -8,14 +8,14 @@
     "authors": [
         {
             "name": "Mickaël Andrieu",
-            "email": "andrieu.travail@gmail.com"
+            "email": "mickael.andrieu@lp-digital.fr"
         }
     ],
     "require": {
         "backbee/backbee": "1.0.*@dev"
     },
     "autoload": {
-        "psr-4": { "BackBee\\Standard\\Bundle\\PlayerBundle\\": "" }
+        "psr-4": { "LpDigital\\Bundle\\PlayerBundle\\": "" }
     },
     "minimum-stability": "stable",
     "extra": {

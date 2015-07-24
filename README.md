@@ -15,7 +15,7 @@ And then you need to activate the bundle. In ``repository/Config/bundles.yml``
 add this line:
 
 ```yaml
-player: BackBee\Standard\Bundle\PlayerBundle\Player 
+player: LpDigital\Bundle\PlayerBundle\Player 
 ```
 
 ## Players
