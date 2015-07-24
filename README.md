@@ -8,7 +8,7 @@ web players.
 You need to install it with composer. In your BackBee project, execute this command:
 
 ```bash
-$~ composer require "mickaelandrieu/player-bundle"
+$~ composer require "lp-digital/player-bundle"
 ```
 
 And then you need to activate the bundle. In ``repository/Config/bundles.yml``
