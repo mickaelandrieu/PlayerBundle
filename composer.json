@@ -4,7 +4,7 @@
     "type": "backbee-bundle",
     "license": "GPL-3.0+",
     "keywords": ["backbee", "youtube", "dailymotion", "vimeo", "spotify"],
-    "homepage": "https://github.com/mickaelandrieu/PlayerBundle",
+    "homepage": "https://github.com/Lp-digital/PlayerBundle",
     "authors": [
         {
             "name": "Mickaël Andrieu",
